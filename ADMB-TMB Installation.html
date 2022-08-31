@@ -1,16 +1,14 @@
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head>
+﻿<html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head>
 	
 	<meta charset="UTF-8">
 	<script type="text/javascript"> document.write('<'+'!--'); </script>
-       <link rel="stylesheet" type="text/css" href="../Programming/Release/editor.css">
+       <link rel="stylesheet" type="text/css" href="https://d2l.msu.edu/content/DEVELOPMENT/2018/courses/DEV-belinsky-2018-BackendTest/ADMB-TMB-Install/../Programming/Release/editor.css">
     <!-- -->
 	<script src="https://cdn.jsdelivr.net/gh/QFCatMSU/OnlineClassBackEnd/module.js">
 	</script>
 </head>
 
 <body>
-<p class="previousLesson"></p>
-<p><b></b></p>
 <h1>ADMB/TMB Full Installation for Windows</h1>
 <h2>Author</h2>
 <p><strong><a href="https://www.canr.msu.edu/people/charles-belinsky?roleURL=charles_belinsky" target="_blank" rel="noopener">Charlie Belinsky</a></strong></p>
@@ -21,16 +19,21 @@
 <p>&nbsp;</p>
 <p class="note">Note: Mac installation of this software is much more involved – contact Charlie for instructions.</p>
 <p class="note"></p>
-<p><a href="https://github.com/QFCatMSU/ADMB-TMB-Install" target="_blank" rel="noopener">The project is maintained on Github</a></p>
+<p><a href="https://github.com/QFCatMSU/ADMB-TMB-Install" target="_blank" rel="noopener">The project is maintained on Github</a>.&nbsp;</p>
 <h2>Overview</h2>
 <p>These procedures in the document install the following software and was tested on 8/30/22:</p>
 <ul>
 <li>R 4.2.1</li>
-<li>Rtools 4.2</li>
+<li>Rtools 4.2 (for the CPP compilers)</li>
 <li>RStudio 2022.07.1 Build 554</li>
 <li>TMB package for R 1.9.1</li>
 <li>ADMB 13.0</li>
-<li>Emacs 27.2 (Emacs version 28 does not work)</li>
+<li>Emacs 27.2 (<em class="hl">Emacs version 28 does not work</em>)</li>
+<li>Emacs configuration files
+<ul>
+<li>These files provide the syntax highlighting in Emacs for both ADMB and TMB and set up the Environment</li>
+</ul>
+</li>
 <li>admb2r.cpp in the ADMB folder</li>
 </ul>
 <h3>Admin access to your computer</h3>
@@ -39,18 +42,23 @@
 <li>Install programs (R, RStudio, Rtools, ADMB, Emacs)</li>
 <li>Install programs directly to the <b>C:</b> drive (ADMB, RTools)</li>
 <li>Change the User Environment variables (PATH.bat)</li>
-<li>Install programs not validated by Microsoft (ADMB, PATH.bat)</li>
+<li>Install programs not validated by Microsoft (ADMB)</li>
+<li>Run a batch file (PATH.bat)</li>
 </ul>
+<h3>Future updates</h3>
+<p>I do not believe that the User Environment PATH variable need to be added anymore as I put this functionality in the emacs configuration files.&nbsp; However, this has not been fully tested out.&nbsp; There is still a chance that the User Environment PATH has been set by a previously installed program and that PATH could interfere with ADMB and TMB's operation.&nbsp; Looking at the User Environment PATH would be my first troubleshooting step.</p>
 <h2>Viewing hidden files and extensions in Windows</h2>
 <p>This is useful for this installation and for any programming you do on your computer.</p>
 <p class="note">Note: images in this document can be resized by clicking on them</p>
 <p></p>
 <p>1) Open a File Explorer window and in...</p>
 <p><strong>&nbsp;&nbsp;&nbsp; Windows 10</strong>: Click <b><i>View</i></b> -&gt; <b><i>Options</i></b> -&gt; <b><i>Change folder and search options</i></b></p>
-<p><b><i>&nbsp;&nbsp;&nbsp; <img src="Images/A-T-Windows10FolderOptions.png" alt="" data-d2l-editor-default-img-style="true" style="max-width: 100%;" class="fs"></i></b></p>
+<p><b><i>&nbsp;&nbsp;&nbsp; <img src="https://d2l.msu.edu/content/DEVELOPMENT/2018/courses/DEV-belinsky-2018-BackendTest/ADMB-TMB-Install/Images/A-T-Windows10FolderOptions.png" alt="" data-d2l-editor-default-img-style="true" style="max-width: 100%;" class="fs"></i></b></p>
+<p class="fig">Accessing folder options in Windows 10</p>
 <p><strong></strong></p>
 <p><strong>&nbsp;&nbsp;&nbsp; Windows 11</strong>: click 3 dots <b>( … ) </b>-&gt;<b> <i>Options</i></b></p>
-<p>&nbsp; &nbsp; <img src="Images/A-T-Windows11FolderOptions.png" alt="" data-d2l-editor-default-img-style="true" style="max-width: 100%;" class="fs"></p>
+<p>&nbsp; &nbsp; <img src="https://d2l.msu.edu/content/DEVELOPMENT/2018/courses/DEV-belinsky-2018-BackendTest/ADMB-TMB-Install/Images/A-T-Windows11FolderOptions.png" alt="" data-d2l-editor-default-img-style="true" style="max-width: 100%;" class="fs"></p>
+<p class="fig">Accessing folder options in Windows 11</p>
 <p></p>
 <p>2) Both <strong>Windows 10 </strong>and <strong>11</strong>:</p>
 <ul>
@@ -63,14 +71,15 @@
 </ul>
 </li>
 </ul>
-<p>&nbsp;&nbsp;&nbsp; <img src="Images/A-T-FolderOptions.png" alt="" data-d2l-editor-default-img-style="true" style="max-width: 100%;" class="fs"></p>
+<p>&nbsp;&nbsp;&nbsp; <img src="https://d2l.msu.edu/content/DEVELOPMENT/2018/courses/DEV-belinsky-2018-BackendTest/ADMB-TMB-Install/Images/A-T-FolderOptions.png" alt="" data-d2l-editor-default-img-style="true" style="max-width: 100%;" class="fs"></p>
+<p class="fig">Showing hidden files and hiding extensions</p>
 <h2>Software Installation</h2>
-<p class="hl">All installations use the default options</p>
+<p class="hl">You can use the default installation options for all applications.</p>
 <p class="hl"></p>
-<p>Steps 1, 3, and 4 are only needed for TMB, and Step 5 is only needed for ADMB.&nbsp; All other steps are required for both ADMB and TMB.</p>
+<p><em class="note">Steps 1, 3, and 4 are only needed for TMB, and Step 5 is only needed for ADMB.</em>&nbsp; All other steps are required for both ADMB and TMB.</p>
 <ol>
 <li><a href="https://cran.r-project.org/bin/windows/base/">Download</a> and Install R (you need to have at least version 4.2)<br><br></li>
-<li><a href="https://cran.r-project.org/bin/windows/Rtools/rtools42/rtools.html">Download</a> and install Rtools42 (version 4 part 2)<br>
+<li><a href="https://cran.r-project.org/bin/windows/Rtools/rtools42/rtools.html">Download</a> and install Rtools42 (you need to have at least version 42, which is the latest as of this writing)<br>
 <ul>
 <li>Click on <b><i>Rrools42 Installer</i></b> in <b><i>Installing Rtools42</i></b> section<br><br></li>
 </ul>
@@ -78,7 +87,7 @@
 <li><a href="https://www.rstudio.com/products/rstudio/download/#download">Download</a> and install RStudio (you need to have a version from 2022 or later)<br><br></li>
 <li>Open RStudio and install the TMB package
 <ul>
-<li>Tools -&gt; Install Packages… -&gt; TMB (in <b><i>Packages</i></b> textbox) à Install</li>
+<li>In RStudio:<em> <strong>Tools </strong></em>-&gt; <em><strong>Install Packages</strong></em>… -&gt; type <em><strong>TMB </strong></em>in <b><i>Packages</i></b> textbox -&gt; <em><strong>Install</strong></em></li>
 <li><em class="hl">Close RStudio</em> after installing package<br><br></li>
 </ul>
 </li>
@@ -113,14 +122,17 @@
 <li><a href="http://ftpmirror.gnu.org/emacs/windows/emacs-27">Download</a> and install <b><i>emacs-27.2-x86_64-installer.exe<br><br></i></b></li>
 <li><a href="https://github.com/QFCatMSU/ADMB-TMB-Install" target="_blank" rel="noopener">Go to ADMB-TMB-Install GitHub page</a>
 <ul>
-<li>Click on green <em><strong>Code </strong></em>button and choose <em><strong>Download Zip</strong></em></li>
-<li>Unzip <b><i>ADMB-TMB-Install-main.zip</i></b> (right-click, <b><i>Extract All</i></b>), which contains
+<li>Click on green <em><strong>Code </strong></em>button and choose <em><strong>Download Zip</strong></em>
+<ul>
+<li>This will download a zipped file named <em><strong>ADMB-TMB-Install-main.zip</strong></em></li>
+</ul>
+</li>
+<li>Unzip <b><i>ADMB-TMB-Install-main.zip</i></b> (right-click, <b><i>Extract All</i></b>), which contains:
 <ul>
 <li>An executable file called <b><i>PATH.bat </i></b></li>
-<li>A folder called<b><i> emacsConfigFiles</i></b> that gets installed to the home directory when <b><i>PATH.bat</i></b> is executed</li>
-<li>A folder called <b><i>Examples</i></b>, which contains ADMB and TMB scripts that can be tested in Emacs.</li>
-<li><em><strong>admb2r.cpp</strong></em> -- a commonly used script file</li>
-<li>these instructions</li>
+<li>A folder called<b><i> emacsConfigFiles</i></b> that gets installed to the emacs folder when <b><i>PATH.bat</i></b> is executed</li>
+<li>A folder called <b><i>Examples</i></b>, which contains ADMB and TMB scripts that are used in this document to test the installation.</li>
+<li><em><strong>admb2r.cpp</strong></em> -- a commonly used script file that's not included with ADMB</li>
 </ul>
 </li>
 <li>Execute (double-click) <b><i>Path.bat</i></b>
@@ -152,7 +164,11 @@
 </li>
 </ol>
 <ol start="8">
-<li>Restart computer</li>
+<li>Restart computer
+<ul>
+<li>As far as I know, this step is not needed -- but I keep it here just to be safe.</li>
+</ul>
+</li>
 </ol>
 <h2>Have Emacs open TPL files by default</h2>
 <ul>
@@ -188,8 +204,8 @@
 </li>
 <li>If the Emacs panels look like this after <b><i>Run,</i></b> then ADMB is properly installed:</li>
 </ul>
-<p>&nbsp; <img src="Images/A-T-ADMBTest.png" alt="" data-d2l-editor-default-img-style="true" style="max-width: 100%;" class="fs"></p>
-<p class="fig">This view is from ADMB 12.3 -- the view from 13.0 is a bit different</p>
+<p>&nbsp; <img src="https://d2l.msu.edu/content/DEVELOPMENT/2018/courses/DEV-belinsky-2018-BackendTest/ADMB-TMB-Install/Images/A-T-ADMBTest.png" alt="" data-d2l-editor-default-img-style="true" style="max-width: 100%;" class="fs"></p>
+<p class="fig">Translate, Build, and Run buttons in ADMB.&nbsp; This view is from ADMB 12.3 -- the view from 13.0 is a bit different</p>
 <h2>Testing out TMB</h2>
 <ul>
 <li>In folder you just unzipped, double-click <b><i>emacs </i></b>-&gt;<b><i>&nbsp; examples </i></b>-&gt;<b><i>&nbsp; mini </i></b>-&gt;<b><i>&nbsp; mini.cpp</i></b></li>
@@ -198,11 +214,33 @@
 <ul>
 <li>Click <b><i>Clean</i></b> (button 1), <b><i>Compile</i></b> (button 2), and <b><i>Run</i></b> (button 3)
 <ul style="list-style-type: circle;">
-<li>Make sure you wait for step to complete</li>
-<li><b><i>Compile</i></b> take a minute or two and gives lots of warnings</li>
+<li>Make sure you wait for each step to complete</li>
+<li><b><i>Compile</i></b> take a minute or two</li>
 </ul>
 </li>
 <li>If the Emacs panels look like this after <b><i>Run,</i></b> then TMB is properly installed:</li>
 </ul>
-<p>&nbsp; <img src="Images/A-T-TMBTest.png" alt="" data-d2l-editor-default-img-style="true" style="max-width: 100%;" class="fs"></p>
+<p>&nbsp; <img src="https://d2l.msu.edu/content/DEVELOPMENT/2018/courses/DEV-belinsky-2018-BackendTest/ADMB-TMB-Install/Images/A-T-TMBTest.png" alt="" data-d2l-editor-default-img-style="true" style="max-width: 100%;" class="fs"></p>
+<p class="fig">Clean, Compile, and Run buttons in TMB</p>
+<h2>Appendix 1: manually copy configuration files and admb2r.cpp</h2>
+<p><em><strong>PATH.bat</strong></em> is a batch that copies the emacs configuration files and <em><strong>admb2r.cpp</strong></em> to the correct locations.</p>
+<p></p>
+<p>The following are instruction to manually copy the files -- <em class="hl">this is only needed if PATH.bat does not work</em>.</p>
+<h3>Copy emacs configuration files</h3>
+<p>Inside <b><i>ADMB-TMB-Install-main</i></b>, there is a folder named <b><i>emacsConfigFiles</i></b>.&nbsp; You need to copy the contents inside the <em><strong>emacsConfigFiles </strong></em>folder (a file named <b><i>.emacs</i></b> and a folder named <b><i>emacs</i></b>) to the user’s <b><i>appdata</i></b> folder.</p>
+<p>&nbsp;</p>
+<p>The easiest way to get to the user's <b><i>appdata</i></b> folder is to type <b>%appdata%</b> in a File Explorer window and hit enter.&nbsp; Or, you can go directly to the folder:<em><strong> C:\Users\&lt;yourUserName&gt;\AppData\Roaming</strong></em>.&nbsp; Move both the <em><strong>emacs </strong></em>folder and <em><strong>.emacs</strong></em> file to this folder:</p>
+<p><img src="https://d2l.msu.edu/content/DEVELOPMENT/2018/courses/DEV-belinsky-2018-BackendTest/ADMB-TMB-Install/Images/A-T-CopyFileMAnually.png" alt="" data-d2l-editor-default-img-style="true" style="max-width: 100%;" class="fs"></p>
+<p class="fig">Location to copy the emacs configuration files</p>
+<h3>Copy admb2r.cpp</h3>
+<p>The file <em><strong>admb2r.cpp</strong></em> is used in ADMB scripts but it does not come with ADMB.&nbsp;</p>
+<p></p>
+<p>You can add it to ADMB by copying <em><strong>admb2r.cpp</strong></em> from the <b><i>ADMB-TMB-Install-main</i></b> folder to the following locations:</p>
+<ul>
+<li><strong>c:\ADMB-13.0\include</strong></li>
+<li><strong>c:\ADMB-13.0\include\contrib</strong>&nbsp; (I am not sure it is necessary to copy it here)</li>
+</ul>
+<p></p>
+<p class="note">Note: If you are using a different version of ADMB then replace <strong>13.0</strong> with the version you are using</p>
+<p></p>
 </body></html>
