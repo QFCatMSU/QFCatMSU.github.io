@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"><head>
+	<title></title>
+	<meta charset="UTF-8">
+	<script type="text/javascript"> document.write('<'+'!--'); </script>
+       <link rel="stylesheet" type="text/css" href="/content/DEVELOPMENT/2018/courses/DEV-belinsky-2018-BackendTest/Programming/Release/editor.css">
+    <!-- -->
+	<script>
+		var scriptFile = document.createElement('script');
+      scriptFile.src = "https://cdn.jsdelivr.net/gh/QFCatMSU/OnlineClassBackEnd/module.js";
+		// scriptFile.src = "/content/DEVELOPMENT/2018/courses/DEV-belinsky-2018-BackendTest/Programming/Release/module.js";
+		document.getElementsByTagName('head')[0].appendChild(scriptFile);
+	</script>
+</head>
+
+<body>
+<p class="previousLesson"></p>
+<p class="nextLesson">Unit 1. SDM and Models</p>
+<h1 class="title" id="title">Unit 0: Introduction to the Course</h1>
+<h2>What is this course about?</h2>
+<p>Making wise decisions about managing natural resources requires an understanding of the potential consequences of those decisions. Understanding the consequences means making a guess about what will happen in the future, and how that future is likely to be affected by decisions you make. For simple decisions we can often make fairly accurate guesses about the consequences using our intuition, but most important natural resource management questions do not involve simple decisions.</p>
+<p></p>
+<p class="">For more complicated decisions it is often very helpful to have a <em class="hl">formal method for forecasting</em> what might happen when a choice is made. The most important and widely used method for forecasting involves building computer simulation models that mimic the real world and allow modelers to ask "what if".</p>
+<p></p>
+<p>This course introduces you to the types of <em class="hl">computer simulation models</em> that are frequently used to inform decisions about management of fish and wildlife populations. The course goal is to provide you with the knowledge you need to begin building your own models of the systems that matter to you, and to use those models to inform the process of making a resource management decision.</p>
+<p></p>
+<p>Watch this video to learn more about the overall structure of the course</p>
+<p class="fs"><iframe id="kaltura_player" src="https://cdnapisec.kaltura.com/p/811482/sp/81148200/embedIframeJs/uiconf_id/27551951/partner_id/811482?iframeembed=true&amp;playerId=kaltura_player&amp;entry_id=0_dg6h7yed&amp;flashvars[streamerType]=auto&amp;flashvars[localizationCode]=en&amp;flashvars[leadWithHTML5]=true&amp;flashvars[sideBarContainer.plugin]=true&amp;flashvars[sideBarContainer.position]=left&amp;flashvars[sideBarContainer.clickToClose]=true&amp;flashvars[chapters.plugin]=true&amp;flashvars[chapters.layout]=vertical&amp;flashvars[chapters.thumbnailRotator]=false&amp;flashvars[streamSelector.plugin]=true&amp;flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&amp;flashvars[dualScreen.plugin]=true&amp;flashvars[Kaltura.addCrossoriginToIframe]=true&amp;&amp;wid=0_ibba26wp" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" allow="autoplay *; fullscreen *; encrypted-media *" sandbox="allow-forms allow-same-origin allow-scripts allow-top-navigation allow-pointer-lock allow-popups allow-modals allow-orientation-lock allow-popups-to-escape-sandbox allow-presentation allow-top-navigation-by-user-activation" title="Kaltura Player" width="640" height="396" frameborder="0"></iframe></p>
+<p class="fs"><span style="font-size: 12pt;"><strong>Video 1: Introduction to the course</strong></span></p>
+<p></p>
+<p><img src="../Images/CourseStructure_by_Unit.jpg" alt="" style="max-width: 100%;" data-d2l-editor-default-img-style="true" class="fs"></p>
+<p class="fig">&nbsp;Overview of the elements of the course</p>
+<h2>What this course is not about.</h2>
+<p>This is not a general systems modeling course. If you get a textbook on modeling, even one specifically on ecological modeling, from the nearest university library, you will find its contents to be different from the content of this course. Of course there will be overlap, but there will be lots of topics covered in the textbook that we won't be covering here. <em class="hl">Our focus will be on management of fish and wildlife populations</em>, and there are topics covered in modeling texts that aren't especially relevant to our focus - for example biogeochemical cycling of nutrients.&nbsp; We will be focusing on what you need to know to build a model that can be used in the "consequences" phase of a decision making process, where the decisions being made are about the management of a fish or wildlife population.&nbsp;</p>
+<h2>What background do you need?</h2>
+<p>Participants in this course will need to:&nbsp;</p>
+<p></p>
+<ul>
+<li>be familiar with basic concepts of animal population dynamics, as learned in a upper-level undergraduate ecology class</li>
+<li>understand mathematical concepts and operations related to calculus and linear algebra, such as matrix multiplication, at a level commensurate with early-year undergraduate courses.</li>
+<li>have taken at least one undergraduate statistics class, preferably one oriented toward statistics for ecologists.</li>
+</ul>
+<p></p>
+<p><span style="font-size: 12pt; line-height: 107%; font-family: arial, helvetica, sans-serif;">If you don’t meet these prerequisites but are still interested and believe you could benefit from the course, please contact us to discuss your previous experience so we can determine whether you might in fact have a sufficient background to be able to succeed in this course.. </span></p>
+<p></p>
+<p>Participants will likely find the course more relevant to their interests if they already have some experience with the process of managing populations, such as setting harvest limits, determining stocking levels, or setting targets for invasive species control.&nbsp;</p>
+<h2>Working with R</h2>
+<p class="">For this course we will be working exclusively with R inside RStudio. R and RStudio are both open-source software that is freely available for PC, Mac, and Linux platforms.&nbsp; R is a programming language, RStudio is a programming environment designed for R.&nbsp; R is also being increasingly used by natural resource management and ecologists (likely due to it being free) and we at the Quantitative Fisheries Center are of the opinion that facilitating its use will directly benefit natural resource agencies. The other advantage of using R is that there is an extensive library of functions for conducting all types of analyses and we can take advantage of these functions without having to program them ourselves.</p>
+<p></p>
+<h3>A note on coding assignments</h3>
+<p>Starting with Unit 2, you will be completing assignments that involve developing and applying model code using R. When you set up your RStudio project folder for the course (see introduction to Unit 2 for more on this), you will be able to download:</p>
+<ul>
+<li>the code you need to get started on some assignments</li>
+<li>examples of code for completed versions of the assignments</li>
+<li>comments (in this code) related to the questions you are asked to address in each assignment.</li>
+</ul>
+<p></p>
+<p>Needless to say, the latter two are there for you to look at&nbsp;<em class="hl">after you have tried to complete the assignment</em><em>.&nbsp;</em>Sometimes, however, you might want to look at them if you get stuck on an assignment or can't figure out why what you're seeing doesn't make sense. In fact we encourage you to do so, rather than get frustrated! And of course you can always contact the instructor.</p>
+<h2>Access to MSU Libraries</h2>
+<p>When you enroll in this course, you will be given access to the MSU Library system. This course will make reference to several journal articles that you can download from the library. All you need to do is go to the MSU electronic journals page <a href="https://libguides.lib.msu.edu/eresources/ejournals" target="_blank" rel="noopener">here</a>, and type in the name of the journal you wish to access in the "Find electronic journals by title..." box. When you find the journal you're looking for, select a publisher and go to their web site - you will need to use your MSU guest ID and login to access their site and download documents.&nbsp;</p>
+<h2>Responsibilities and Expectations</h2>
+<p>This is an asynchronous, self-paced course. We expect students to complete the material in less than six months. In all likelihood, taking longer will negatively affect retention of the material. We will occasionally send reminders to students who have been inactive in the course for a few weeks, but it is your responsibility to stay engaged. Here are some additional expectations and responsibilities for both you and the instructor.</p>
+<h3>Student responsibilities</h3>
+<ul style="list-style-type: disc;">
+<li>Students are expected to regularly check the&nbsp;<em><strong>Announcements</strong>&nbsp;</em>section on the home page for the class and the email address associated with their MSU ID/ MSU Community ID for new information regarding the class.</li>
+<li>Students are expected to ask questions if they are having problems with an application or assignment.</li>
+<li>Students are expected to monitor their progress in order to complete the course work on time.</li>
+<li>Students are expected to contact either the instructor or MSU regarding technical issues that are interfering with their ability to complete the class.</li>
+<li>Students are expected to follow MSU's academic integrity policy - see next section.</li>
+</ul>
+<h3>Academic Integrity</h3>
+<p>Written or other work which a student submits in a course, shall be the product of his/her/their own efforts. Plagiarism, cheating, and all other forms of academic dishonesty are prohibited. Students are expected to adhere to the ethical and professional standards associated with their programs and academic courses. All applicable portions of Michigan State’s Policy on Academic Integrity apply to non-credit courses such as this one. See <a href="https://ombud.msu.edu/resources-self-help/academic-integrity" target="_self">https://ombud.msu.edu/resources-self-help/academic-integrity&nbsp;</a>for details.</p>
+<h3>Instructor responsibilities</h3>
+<ul style="list-style-type: disc;">
+<li>Instructor will be available for assistance for requested virtual office hours (through Zoom).</li>
+<li>Instructor will respond to emails from students within 1 business day.&nbsp; Potential for delayed responses (e.g., instructor is on vacation) will be posted on the front page of the course.</li>
+<li>Changes to the course will be posted in the&nbsp;<em><strong>Announcements</strong>&nbsp;</em>section of the home page for the class.</li>
+</ul>
+<p></p>
+<h3>Attendance and Participation</h3>
+<p>You are expected to log in to the class at least once a week. Logging in allows you to stay updated and see new announcements.</p>
+<p></p>
+<p>Please note that not all course lessons are the same length. Our goals with regard to participation/progress are to (a) keep you engaged in the course, (b) enhance the overall learning environment by promoting student-teacher communication, and (c) avoid a last minute time crunch for everyone involved.&nbsp;<em class="hl">We will not be sympathetic or make allowances for your failure on course tasks or deadlines that result from not seeing announcements because you had not accessed the course for an extended period, and had not told us you would be away from the internet.</em></p>
+<p><em></em></p>
+<h3>ADA Statement</h3>
+<ul style="list-style-type: disc;">
+<li>MSU provides students with disabilities reasonable accommodations to participate in educational programs, activities, or services. Students with disabilities requiring accommodations to participate in class activities or meet course requirements should contact the instructor as early as possible.</li>
+<li>For students needing accommodations for disabilities, please contact your instructor and The Resource Center for Persons with Disabilities at Michigan State University at 517-353-9642.</li>
+</ul>
+</body></html>
