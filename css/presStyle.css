@@ -1,14 +1,10 @@
-body
-{
-  font-family: 'Times New Roman', Times, serif !important;
-}
-
 h1.title 
 {
   font-size: 180px;
   color:darkred;
   line-height: 90px;
   text-align: left;
+  font-family: 'Times New Roman', Times, serif !important;
 }
 .subtitle
 {
