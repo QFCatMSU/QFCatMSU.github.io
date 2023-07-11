@@ -1,0 +1,17 @@
+h1.title 
+{
+  font-size: 180px;
+  line-height: 90px;
+  text-align: left;
+}
+.subtitle
+{
+  font-size: 90px;
+  text-align: left;
+}
+h2.author 
+{
+  font-weight: normal;
+  line-height: 90px;
+  color: aqua;
+}
