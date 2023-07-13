@@ -1,14 +1,16 @@
+.centering
+{
+  display:block;
+  text-align:center;
+}
 .pageRef
 {
   position: absolute;
   bottom: 0;
   right: 0;
 }
-
 h2
 {
-  color:#18453b !important;
-  text-align: center;
  /* font-family: 'Times New Roman', Times, serif !important;*/
 }
 h1.title
@@ -63,10 +65,11 @@ h1.title
 }
 .backgrounds>.quarto-title-block
 {
-  background-image: url("https://qfcatmsu.github.io/Images/dark-big.png");
-  background-repeat: no-repeat;
+/* Background images will not render when printed to PDF 
+  background-image:url("https://qfcatmsu.github.io/Images/dark-big.png");
+  background-repeat:no-repeat;
   background-position: 97% 97%;
-  background-size: 40%;
+  background-size: 40%; */
 }
 div.slide-number
 {
