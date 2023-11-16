@@ -1,0 +1,34 @@
+---
+title: "Quarto Installation and help"
+author: "Charlie Belinsky <br> belinsky@msu.edu"
+date: 11/16/2023
+format: 
+  html:
+    toc: true
+    number-sections: true
+editor: visual
+---
+
+## Install Quarto
+
+You need to install version 1.4, which as of 16, November 2023 is the pre-release version of Quarto.
+
+<https://quarto.org/docs/download/prerelease.html>
+
+### Packages needed
+
+rmarkdown
+
+## Installation of LaTex on Windows (tinyTeX)
+
+This is only needed if you plan to render a Quarto document in PDF format.  
+
+Install package tinytex (in CRAN)
+run: tinytex::install_tinytex()
+
+### Update issue with tinyTex
+
+When rendering a PDF Quarto might prompt you to update tlmgr, which is your LaTeX distribution. You will not be able to render a PDF until the update has occurred but following Quarto's prompts will NOT be successful.  You need to update it manually by running:
+
+tinytex::tlmgr_update()
+
