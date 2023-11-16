@@ -14,6 +14,16 @@ editor: visual
 
 This document was created and is maintained by Charlie Belinsky and lives here: <https://qfcatmsu.github.io/tutorials/Quarto.html>. It is meant to be a living document so expect to see changes on it. Feel free to email me with questions and/or suggestions.
 
+### What's next
+
+-   explanation of the two types of Quarto editors (visual and source)
+
+-   using headers in quarto
+
+-   better organization of the document and presentation types
+
+-   rendering doucments
+
 ## Install Quarto
 
 You need to download and install Quarto version ***1.4***, which, as of November 16, 2023, is the pre-release version.
