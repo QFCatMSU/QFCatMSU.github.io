@@ -12,7 +12,7 @@ editor: visual
 
 ## Info
 
-This document was created and is maintained by Charlie Belinsky. It is meant to be a living document so expect to see changes on it. Feel free to email me with questions and/or suggestions.
+This document was created and is maintained by Charlie Belinsky and lives here: <https://qfcatmsu.github.io/tutorials/Quarto.html>. It is meant to be a living document so expect to see changes on it. Feel free to email me with questions and/or suggestions.
 
 ## Install Quarto
 
