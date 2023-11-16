@@ -47,13 +47,24 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#install-quarto" id="toc-install-quarto" class="nav-link active" data-scroll-target="#install-quarto"><span class="header-section-number">1</span> Install Quarto</a>
+  <li><a href="#info" id="toc-info" class="nav-link active" data-scroll-target="#info"><span class="header-section-number">1</span> Info</a></li>
+  <li><a href="#install-quarto" id="toc-install-quarto" class="nav-link" data-scroll-target="#install-quarto"><span class="header-section-number">2</span> Install Quarto</a>
   <ul class="collapse">
-  <li><a href="#packages-needed" id="toc-packages-needed" class="nav-link" data-scroll-target="#packages-needed"><span class="header-section-number">1.1</span> Packages needed</a></li>
+  <li><a href="#packages-needed" id="toc-packages-needed" class="nav-link" data-scroll-target="#packages-needed"><span class="header-section-number">2.1</span> Packages needed</a></li>
   </ul></li>
-  <li><a href="#installation-of-latex-on-windows-tinytex" id="toc-installation-of-latex-on-windows-tinytex" class="nav-link" data-scroll-target="#installation-of-latex-on-windows-tinytex"><span class="header-section-number">2</span> Installation of LaTex on Windows (tinyTeX)</a>
+  <li><a href="#installation-of-latex-on-windows-tinytex" id="toc-installation-of-latex-on-windows-tinytex" class="nav-link" data-scroll-target="#installation-of-latex-on-windows-tinytex"><span class="header-section-number">3</span> Installation of LaTex on Windows (tinyTeX)</a>
   <ul class="collapse">
-  <li><a href="#update-issue-with-tinytex" id="toc-update-issue-with-tinytex" class="nav-link" data-scroll-target="#update-issue-with-tinytex"><span class="header-section-number">2.1</span> Update issue with tinyTex</a></li>
+  <li><a href="#update-issue-with-tinytex" id="toc-update-issue-with-tinytex" class="nav-link" data-scroll-target="#update-issue-with-tinytex"><span class="header-section-number">3.1</span> Update issue with tinyTex</a></li>
+  </ul></li>
+  <li><a href="#starting-a-new-quarto-document" id="toc-starting-a-new-quarto-document" class="nav-link" data-scroll-target="#starting-a-new-quarto-document"><span class="header-section-number">4</span> Starting a new Quarto document</a>
+  <ul class="collapse">
+  <li><a href="#quarto-document-options" id="toc-quarto-document-options" class="nav-link" data-scroll-target="#quarto-document-options"><span class="header-section-number">4.1</span> Quarto document options</a></li>
+  <li><a href="#html-and-pdf-documents" id="toc-html-and-pdf-documents" class="nav-link" data-scroll-target="#html-and-pdf-documents"><span class="header-section-number">4.2</span> HTML and PDF documents</a></li>
+  </ul></li>
+  <li><a href="#starting-a-new-quarto-presentation" id="toc-starting-a-new-quarto-presentation" class="nav-link" data-scroll-target="#starting-a-new-quarto-presentation"><span class="header-section-number">5</span> Starting a new Quarto presentation</a>
+  <ul class="collapse">
+  <li><a href="#quarto-presentation-options" id="toc-quarto-presentation-options" class="nav-link" data-scroll-target="#quarto-presentation-options"><span class="header-section-number">5.1</span> Quarto presentation options</a></li>
+  <li><a href="#html-and-pdf-presentations" id="toc-html-and-pdf-presentations" class="nav-link" data-scroll-target="#html-and-pdf-presentations"><span class="header-section-number">5.2</span> HTML and PDF presentations</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -91,23 +102,78 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="install-quarto" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="install-quarto"><span class="header-section-number">1</span> Install Quarto</h2>
-<p>You need to install version 1.4, which as of 16, November 2023 is the pre-release version of Quarto.</p>
+<section id="info" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="info"><span class="header-section-number">1</span> Info</h2>
+</section>
+<section id="install-quarto" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="install-quarto"><span class="header-section-number">2</span> Install Quarto</h2>
+<p>You need to download and install Quarto version 1.4, which, as of November 16, 2023, is the pre-release version.</p>
 <p><a href="https://quarto.org/docs/download/prerelease.html" class="uri">https://quarto.org/docs/download/prerelease.html</a></p>
-<section id="packages-needed" class="level3" data-number="1.1">
-<h3 data-number="1.1" class="anchored" data-anchor-id="packages-needed"><span class="header-section-number">1.1</span> Packages needed</h3>
-<p>rmarkdown</p>
+<p>The released version of Quarto (1.3) will not work.</p>
+<section id="packages-needed" class="level3" data-number="2.1">
+<h3 data-number="2.1" class="anchored" data-anchor-id="packages-needed"><span class="header-section-number">2.1</span> Packages needed</h3>
+<p>You need to install RmarkDown:<br>
+<code>install.packages("rmarkdown")</code></p>
 </section>
 </section>
-<section id="installation-of-latex-on-windows-tinytex" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="installation-of-latex-on-windows-tinytex"><span class="header-section-number">2</span> Installation of LaTex on Windows (tinyTeX)</h2>
+<section id="installation-of-latex-on-windows-tinytex" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="installation-of-latex-on-windows-tinytex"><span class="header-section-number">3</span> Installation of LaTex on Windows (tinyTeX)</h2>
 <p>This is only needed if you plan to render a Quarto document in PDF format.</p>
-<p>Install package tinytex (in CRAN) run: tinytex::install_tinytex()</p>
-<section id="update-issue-with-tinytex" class="level3" data-number="2.1">
-<h3 data-number="2.1" class="anchored" data-anchor-id="update-issue-with-tinytex"><span class="header-section-number">2.1</span> Update issue with tinyTex</h3>
-<p>When rendering a PDF Quarto might prompt you to update tlmgr, which is your LaTeX distribution. You will not be able to render a PDF until the update has occurred but following Quarto’s prompts will NOT be successful. You need to update it manually by running:</p>
-<p>tinytex::tlmgr_update()</p>
+<p>Install package tinytex (in CRAN):<br>
+<code>tinytex::install_tinytex()</code></p>
+<section id="update-issue-with-tinytex" class="level3" data-number="3.1">
+<h3 data-number="3.1" class="anchored" data-anchor-id="update-issue-with-tinytex"><span class="header-section-number">3.1</span> Update issue with tinyTex</h3>
+<p>When rendering a PDF Quarto might prompt you to update <strong>tlmgr</strong>, which is your LaTeX distribution. You will not be able to render a PDF until the update has occurred but following Quarto’s prompts will NOT be successful.</p>
+<p>You need to update <strong>tlmgr</strong> manually by running:<br>
+<code>tinytex::tlmgr_update()</code></p>
+</section>
+</section>
+<section id="starting-a-new-quarto-document" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="starting-a-new-quarto-document"><span class="header-section-number">4</span> Starting a new Quarto document</h2>
+<p>In RStudio, click <strong><em>File -&gt; New File -&gt; Quarto document…</em></strong></p>
+<p><img src="images/Quarto_Docs.png" class="img-fluid"></p>
+<section id="quarto-document-options" class="level3" data-number="4.1">
+<h3 data-number="4.1" class="anchored" data-anchor-id="quarto-document-options"><span class="header-section-number">4.1</span> Quarto document options</h3>
+<p>There are three types of documents you can create in Quarto:</p>
+<ol type="1">
+<li><p>HTML document</p></li>
+<li><p>PDF document (requires a LaTex installation)</p></li>
+<li><p>Word document</p></li>
+</ol>
+</section>
+<section id="html-and-pdf-documents" class="level3" data-number="4.2">
+<h3 data-number="4.2" class="anchored" data-anchor-id="html-and-pdf-documents"><span class="header-section-number">4.2</span> HTML and PDF documents</h3>
+<p>If you want a <strong><em>document</em></strong> that can be <strong><em>both</em></strong> HTML and PDF then:</p>
+<ol type="1">
+<li><p>Create an HTML document.</p></li>
+<li><p>Open the HTML document in any browser</p></li>
+<li><p>Use the Print dialog and Print to a PDF</p></li>
+</ol>
+<p>Note: This method does not require a LaTeX installation.</p>
+</section>
+</section>
+<section id="starting-a-new-quarto-presentation" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="starting-a-new-quarto-presentation"><span class="header-section-number">5</span> Starting a new Quarto presentation</h2>
+<p>In RStudio, click <strong><em>File -&gt; New File -&gt; Quarto presentation…</em></strong></p>
+<p><img src="images/Quarto_Pres.png" class="img-fluid"></p>
+<section id="quarto-presentation-options" class="level3" data-number="5.1">
+<h3 data-number="5.1" class="anchored" data-anchor-id="quarto-presentation-options"><span class="header-section-number">5.1</span> Quarto presentation options</h3>
+<ol type="1">
+<li><p>Reveal JS presentation (a webpage designed like PowerPoint)</p></li>
+<li><p>Beamer presentation (a PDF designed like PowerPoint)</p></li>
+<li><p>PowerPoint</p></li>
+</ol>
+</section>
+<section id="html-and-pdf-presentations" class="level3" data-number="5.2">
+<h3 data-number="5.2" class="anchored" data-anchor-id="html-and-pdf-presentations"><span class="header-section-number">5.2</span> HTML and PDF presentations</h3>
+<p>If you want a PowerPoint-like <strong><em>presentation</em></strong> that can be <strong><em>both</em></strong> HTML and PDF then:</p>
+<ol type="1">
+<li><p>Create an Reveal JS document.</p></li>
+<li><p>Open the HTML document in Chrome</p></li>
+<li><p>Click “E” on the webpage</p></li>
+<li><p>Use the Print dialog and Print to a PDF</p></li>
+</ol>
+<p>Note: This method does not require a LaTeX installation.</p>
 </section>
 </section>
 
