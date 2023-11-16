@@ -35,10 +35,10 @@ You need to install RmarkDown:\
 
 This is only needed if you plan to render a Quarto document in PDF format.
 
-Install the tinytex package (from CRAN):\
+Install the ***tinytex*** package (from CRAN):\
 `install.packages("tinytex")`
 
-Use the tinytex package to install tinytex:\
+Use the ***tinytex*** package to install the ***tinytex*** application:\
 `tinytex::install_tinytex()`
 
 ### Update issue with tinyTex
